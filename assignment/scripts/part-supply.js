@@ -32,7 +32,9 @@ newSupplyChanges = supplyChanges.push(25);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
-
+for (var i = 0; i < array.length; i++) {
+  array[i]
+}
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
@@ -58,3 +60,5 @@ while (i >= 6) {
 }
 console.log(`The number of filled boxes: ${boxes}.`)
 console.log(`The number of parts left over: ${i}.`)
+// While it would have been simpler to just run the arithmetic and log
+// the values, this method actually reqiures the loop to be successful.

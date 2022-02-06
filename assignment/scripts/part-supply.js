@@ -45,7 +45,7 @@ console.log('6. Showing supplyChanges...');
 } */ //First shot at solving this - this code block only logs the positive integers.
 // Update - figured it out. It was because I used the wrong operator for x = 0. See below for correction.
 
-for (let i = 0; i < supplyChanges.length; i++) {
+/* for (let i = 0; i < supplyChanges.length; i++) {
   let x = supplyChanges[i];
   if (x > 0) {
     console.log(`Added ${x} parts.`);
@@ -54,23 +54,46 @@ for (let i = 0; i < supplyChanges.length; i++) {
   } else if (x == 0) {
     console.log(`No Change.`);
   } else {
-    console.log(`Uncertain change.`)
+    console.log(`Uncertain change.`) //Just added this to troubleshoot if it was a problem with the loop or syntax.
   }
-}
+} */
 
 // I would like to make the value of -6 positive, so it just logs 'removed 6 parts' instead of
 // 'removed -6 parts'. Based on what google has to say, the math.abs() built in function does this.
 
-
+for (let i = 0; i < supplyChanges.length; i++) {
+  let x = supplyChanges[i];
+  if (x > 0) {
+    console.log(`Added ${x} parts.`);
+  } else if (x < 0) {
+    console.log(`Removed ${Math.abs(x)} parts.`);
+  } else if (x == 0) {
+    console.log(`No Change.`);
+  } 
+}
+// And it works! Happy with that.
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
+
 console.log('7. Showing supplyChanges with "for of" loop');
+
+for (let i of supplyChanges) {
+  if (i > 0) {
+    console.log(`Added ${i} parts.`);
+  } else if (i < 0) {
+    console.log(`Removed ${Math.abs(i)} parts.`);
+  } else if (i == 0) {
+    console.log(`No Change.`);
+  }
+} //Just had to remove all references to x, because that variable doesn't need
+// to exist when using the for of loop, which already iterates through the array
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+
 
 // 9. We have a large stash of parts in our warehouse that we
 //    need to box up and get ready for shipment.
@@ -88,4 +111,4 @@ while (i >= 6) {
 console.log(`The number of filled boxes: ${boxes}.`)
 console.log(`The number of parts left over: ${i}.`)
 // While it would have been simpler to just run the arithmetic and log
-// the values, this method actually reqiures the loop to be successful.
+// the values, this method actually reqiures the loop to be successful to log.

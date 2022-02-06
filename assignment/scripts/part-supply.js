@@ -32,16 +32,19 @@ newSupplyChanges = supplyChanges.push(25);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
-for (let i = 0; i < supplyChanges.length; i++) {
-  if (x > 0) {
-    console.log('Added x parts.');
-  } else if (x = 0) {
-    console.log('No Change.');
-  } else if (x < 0) {
-    console.log('Removed x parts.');
-  }
 
+/* for (let i = 0; i < supplyChanges.length; i++) {
+  let x = supplyChanges[i];
+  if (x > 0) {
+    console.log(`Added ${x} parts.`);
+  } else if (x = 0) {
+    console.log(`No Change.`);
+  } else if (x < 0) {
+    console.log(`Removed ${x} parts.`);
   }
+} */ //First shot at solving this - this code block only logs the positive integers.
+for (let i = 0; i < supplyChanges.length; i++) {
+  array[i]
 }
 
 // STRETCH GOALS

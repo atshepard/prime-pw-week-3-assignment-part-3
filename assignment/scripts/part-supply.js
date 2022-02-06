@@ -69,7 +69,7 @@ for (let i = 0; i < supplyChanges.length; i++) {
     console.log(`Removed ${Math.abs(x)} parts.`);
   } else if (x == 0) {
     console.log(`No Change.`);
-  } 
+  }
 }
 // And it works! Happy with that.
 
@@ -94,6 +94,11 @@ for (let i of supplyChanges) {
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
 
+let partsAvailable = 0;
+for (let i = 0; i < supplyChanges.length; i++) {
+  partsAvailable += supplyChanges[i];
+}
+console.log(partsAvailable);
 
 // 9. We have a large stash of parts in our warehouse that we
 //    need to box up and get ready for shipment.
@@ -110,5 +115,3 @@ while (i >= 6) {
 }
 console.log(`The number of filled boxes: ${boxes}.`)
 console.log(`The number of parts left over: ${i}.`)
-// While it would have been simpler to just run the arithmetic and log
-// the values, this method actually reqiures the loop to be successful to log.

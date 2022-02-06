@@ -43,9 +43,25 @@ console.log('6. Showing supplyChanges...');
     console.log(`Removed ${x} parts.`);
   }
 } */ //First shot at solving this - this code block only logs the positive integers.
+// Update - figured it out. It was because I used the wrong operator for x = 0. See below for correction.
+
 for (let i = 0; i < supplyChanges.length; i++) {
-  array[i]
+  let x = supplyChanges[i];
+  if (x > 0) {
+    console.log(`Added ${x} parts.`);
+  } else if (x < 0) {
+    console.log(`Removed ${x} parts.`);
+  } else if (x == 0) {
+    console.log(`No Change.`);
+  } else {
+    console.log(`Uncertain change.`)
+  }
 }
+
+// I would like to make the value of -6 positive, so it just logs 'removed 6 parts' instead of
+// 'removed -6 parts'. Based on what google has to say, the math.abs() built in function does this.
+
+
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
